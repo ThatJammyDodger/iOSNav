@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iOSNav.View.DemoPage"
+             xmlns:viewmodel="clr-namespace:iOSNav.ViewModel"
+             x:DataType="viewmodel:DemoViewModel"
+             Title="{Binding Title}">
+
+
+    <VerticalStackLayout HorizontalOptions="Center" Margin="15" Spacing="15">
+
+        <Label Text="Observe that on iOS the back button label sets itself to the page title if page title is short, and sets itself to 'Back' if the page title is long." />
+
+        <Button Text="Change title to long string"
+                Command="{Binding ChangeTitleCommand}"
+                CommandParameter="This is quite long" />
+        <Button Text="Change title to short string"
+                Command="{Binding ChangeTitleCommand}"
+                CommandParameter="Short string" />
+
+    </VerticalStackLayout>
+
+
+</ContentPage>
