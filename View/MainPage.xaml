@@ -32,7 +32,7 @@
                 HorizontalOptions="Center" />
 
             <Button 
-                Text="{Binding Count, StringFormat='Clicked {0} times'}"
+                Text="{Binding DisplayCount}"
                 Command="{Binding IncrementCommand}"
                 HorizontalOptions="Center" />
 

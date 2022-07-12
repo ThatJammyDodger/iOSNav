@@ -4,7 +4,13 @@ namespace iOSNav.ViewModel;
 public partial class MainViewModel : BaseViewModel
 {
     [ObservableProperty]
+    [NotifyPropertyChangedFor(nameof(DisplayCount))]
     public int count;
+
+    public string DisplayCount
+    {
+        get => Count == 1 ? $"Clicked {Count} time" : $"Clicked {Count} times";
+    }
 
     public MainViewModel()
     {
